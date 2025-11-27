@@ -8,3 +8,8 @@ target/
 *.tmp
 *.swp
 .DS_Store
+
+# Maven
+target/
+**/target/
+
