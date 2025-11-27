@@ -2,3 +2,8 @@
 # Maven
 **/target/
 
+
+# Maven
+target/
+**/target/
+
