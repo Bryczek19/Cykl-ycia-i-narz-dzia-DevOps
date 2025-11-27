@@ -1,0 +1,18 @@
+services:
+  app:
+    image: bryczek19/demo-spring:latest
+    container_name: demo-spring-app
+    restart: always
+    ports:
+      - "8080:8080"
+
+  nginx:
+    image: nginx:alpine
+    container_name: demo-nginx
+    restart: always
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
